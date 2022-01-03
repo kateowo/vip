@@ -1,8 +1,8 @@
 ## todo
 
-- [ ] initial setup
-- [ ] pick teams
-- [ ] define vip
-- [ ] start script
+- [x] initial setup
+- [x] pick teams
+- [x] define vip
+- [x] start script
 
-etc.
+done?
