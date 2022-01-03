@@ -17,10 +17,10 @@ scoreboard players reset green internal
 scoreboard players reset yellow internal
 
 execute as @a[gamemode=!spectator] run scoreboard players add alive internal 1
-execute as @a[team=red] run scoreboard players add red internal 1
-execute as @a[team=blue] run scoreboard players add blue internal 1
-execute as @a[team=green] run scoreboard players add green internal 1
-execute as @a[team=yellow] run scoreboard players add yellow internal 1
+execute as @a[team=red,limit=1] run scoreboard players set red internal 1
+execute as @a[team=blue,limit=1] run scoreboard players set blue internal 1
+execute as @a[team=green,limit=1] run scoreboard players set green internal 1
+execute as @a[team=yellow,limit=1] run scoreboard players set yellow internal 1
 
 # set period
 scoreboard players set period internal 0

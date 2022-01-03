@@ -1,7 +1,7 @@
 # VIP death tracking
 
 
-tellraw @s ["",{"text":"You have respawned! Defend your VIP.","color":"green"}]
+tellraw @s {"text":"You have respawned! Defend your VIP.","color":"green"}
 
 # based on team
 execute if entity @s[team=red] run tp @s @a[team=red,tag=vip,limit=1]

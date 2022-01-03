@@ -5,12 +5,13 @@
 execute as @a unless score setup internal matches 1.. run function vip:setup
 
 # team count
-execute if score team_count global matches ..2 run function vip:teams/2
-execute if score team_count global matches 3 run function vip:teams/3
-execute if score team_count global matches 4 run function vip:teams/4
+execute if score period time matches 1 if score team_count global matches ..2 run function vip:teams/2
+execute if score period time matches 1 if score team_count global matches 3 run function vip:teams/3
+execute if score period time matches 1 if score team_count global matches 4 run function vip:teams/4
 
 # track deaths
-execute as @a at @s if score @s death matches 1.. run function vip:death
+execute as @a[tag=!vip] at @s if score @s death matches 1.. run function vip:death
+execute as @a[tag=vip] at @s if score @s death matches 1.. run function vip:vip_death
 
 # VIP
 effect give @a[tag=vip] glowing 1 255 true
