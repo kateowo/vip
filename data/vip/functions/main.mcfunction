@@ -11,8 +11,8 @@ execute if score period internal matches 1 if score team_count global matches 4 
 
 # track deaths
 execute unless score period internal matches 1 run scoreboard players reset @a death
-execute if score period internal matches 1 as @a[tag=!vip] at @s if score @s death matches 1.. run function vip:death
-execute if score period internal matches 1 as @a[tag=vip] at @s if score @s death matches 1.. run function vip:vip_death
+execute if score period internal matches 1 as @a[tag=!vip] at @s if score @s death matches 1.. run function vip:death/all
+execute if score period internal matches 1 as @a[tag=vip] at @s if score @s death matches 1.. run function vip:death/vip
 
 # timer
 execute if score period internal matches 0.. run function vip:time
