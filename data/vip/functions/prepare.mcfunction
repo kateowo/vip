@@ -7,8 +7,13 @@ scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add last_login dummy
 
+# bossbar
+bossbar add vip:main ""
+bossbar set vip:main name {"text":"The game will begin shortly!"}
+bossbar set vip:main color green
+
 # death
-scoreboard objectives add death dummy
+scoreboard objectives add death deathCount
 
 # teams
 team add red

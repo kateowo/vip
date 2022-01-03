@@ -22,5 +22,7 @@ execute as @a[team=blue,limit=1] run scoreboard players set blue internal 1
 execute as @a[team=green,limit=1] run scoreboard players set green internal 1
 execute as @a[team=yellow,limit=1] run scoreboard players set yellow internal 1
 
+worldborder set 2500 3
+
 # set period
 scoreboard players set period internal 0

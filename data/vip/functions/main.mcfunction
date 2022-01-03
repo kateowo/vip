@@ -14,6 +14,10 @@ execute unless score period internal matches 1 run scoreboard players reset @a d
 execute if score period internal matches 1 as @a[tag=!vip] at @s if score @s death matches 1.. run function vip:death
 execute if score period internal matches 1 as @a[tag=vip] at @s if score @s death matches 1.. run function vip:vip_death
 
+# timer
+execute if score period internal matches 0.. run function vip:time
+bossbar set vip:main players @a
+
 # VIP
 execute if score period internal matches 1 run effect give @a[tag=vip] glowing 1 255 true
 execute if score period internal matches 1 run effect give @a[tag=vip] slowness 1 0 true
