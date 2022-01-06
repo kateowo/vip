@@ -9,6 +9,12 @@ execute if score period internal matches 1 if score team_count global matches ..
 execute if score period internal matches 1 if score team_count global matches 3 run function vip:teams/3
 execute if score period internal matches 1 if score team_count global matches 4 run function vip:teams/4
 
+# dead
+execute if score period internal matches 1 as @a[team=red,gamemode=!spectator] unless score red internal matches 1.. run gamemode spectator @s
+execute if score period internal matches 1 as @a[team=blue,gamemode=!spectator] unless score blue internal matches 1.. run gamemode spectator @s
+execute if score period internal matches 1 as @a[team=green,gamemode=!spectator] unless score green internal matches 1.. run gamemode spectator @s
+execute if score period internal matches 1 as @a[team=yellow,gamemode=!spectator] unless score yellow internal matches 1.. run gamemode spectator @s
+
 # track deaths
 execute unless score period internal matches 1 run scoreboard players reset @a death
 execute if score period internal matches 1 as @a[tag=!vip] at @s if score @s death matches 1.. run function vip:death/all
