@@ -10,10 +10,15 @@ team modify blue prefix {"text":"B ","color":"blue","bold":true}
 team modify green prefix {"text":"G ","color":"green","bold":true}
 team modify yellow prefix {"text":"Y ","color":"yellow","bold":true}
 
+team modify red friendlyFire false
+team modify blue friendlyFire false
+team modify green friendlyFire false
+team modify yellow friendlyFire false
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true
-gamerule keepInventory true
+gamerule keepInventory false
 
 # period
 scoreboard players set period internal -1

@@ -33,10 +33,10 @@ execute if score period internal matches 1 run effect give @a[tag=vip] glowing 1
 execute if score period internal matches 1 run effect give @a[tag=vip] slowness 1 0 true
 execute if score period internal matches 1 run title @a[tag=vip] actionbar ["",{"text":"You are your team's "},{"text":"VIP","color":"green","bold":true},{"text":" - if you die, your team dies."}]
 # non-VIP
-execute if score period internal matches 1 run title @a[team=red,tag=!vip] actionbar ["",{"text":"Defend "},{"selector":"@a[team=red,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
-execute if score period internal matches 1 run title @a[team=blue,tag=!vip] actionbar ["",{"text":"Defend "},{"selector":"@a[team=blue,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
-execute if score period internal matches 1 run title @a[team=green,tag=!vip] actionbar ["",{"text":"Defend "},{"selector":"@a[team=green,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
-execute if score period internal matches 1 run title @a[team=yellow,tag=!vip] actionbar ["",{"text":"Defend "},{"selector":"@a[team=yellow,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
+execute as @a[team=red,tag=!vip] unless score @s death_time matches 1.. if score period internal matches 1 run title @s actionbar ["",{"text":"Defend "},{"selector":"@a[team=red,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
+execute as @a[team=blue,tag=!vip] unless score @s death_time matches 1.. if score period internal matches 1 run title @s actionbar ["",{"text":"Defend "},{"selector":"@a[team=blue,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
+execute as @a[team=green,tag=!vip] unless score @s death_time matches 1.. if score period internal matches 1 run title @s actionbar ["",{"text":"Defend "},{"selector":"@a[team=green,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
+execute as @a[team=yellow,tag=!vip] unless score @s death_time matches 1.. if score period internal matches 1 run title @s actionbar ["",{"text":"Defend "},{"selector":"@a[team=yellow,tag=vip]","color":"green","bold":true},{"text":" to keep your team alive."}]
 
 # period checks
 # -1, pre-start
@@ -53,7 +53,7 @@ execute as @a if score period internal matches 0 unless score @s last_login matc
 execute as @a if score period internal matches 0 unless score @s last_login matches 0 run effect clear @s regeneration
 execute as @a if score period internal matches 0 unless score @s last_login matches 0 run scoreboard players set @s last_login 0
 # 1, main game
-execute as @a if score period internal matches 1 unless score @s last_login matches 1 run gamemode survival @s[team=!admin]
+execute as @a if score period internal matches 1 unless score @s last_login matches 1 unless score @s death_time matches 1.. run gamemode survival @s[team=!admin]
 execute as @a if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s weakness
 execute as @a if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s resistance
 execute as @a if score period internal matches 1 unless score @s last_login matches 1 run effect clear @s regeneration

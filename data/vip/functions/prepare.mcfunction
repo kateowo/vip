@@ -14,6 +14,9 @@ bossbar set vip:main color green
 
 # death
 scoreboard objectives add death deathCount
+# death times
+scoreboard objectives add death_time dummy
+scoreboard objectives add death_time_t dummy
 
 # teams
 team add red
