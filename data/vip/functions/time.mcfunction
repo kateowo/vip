@@ -16,10 +16,10 @@ execute as @a if score @s death_time matches 25.. run function vip:death/respawn
 execute as @a if score @s death_time matches 25.. run scoreboard players reset @s death_time
 
 # period
-execute if score time_s internal matches 400 if score period internal matches 0 run worldborder set 20 2400
+execute if score time_s internal matches 400 if score period internal matches 0 run worldborder set 20 2500
 execute if score time_s internal matches 480 if score period internal matches 0 run function vip:main_game
 
-execute if score time_s internal matches 1400 if score period internal matches 1 run worldborder set 125 600
+execute if score time_s internal matches 1400 if score period internal matches 1 run worldborder set 125 800
 
 # bossbar
 execute if score period internal matches -1 run bossbar set vip:main name {"text":"The game will begin shortly!"}

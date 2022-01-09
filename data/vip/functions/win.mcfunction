@@ -5,7 +5,7 @@ scoreboard players set period internal 3
 gamemode spectator @a[tag=!winner]
 
 # title
-title @a title {"text":"VICTORY!","color":"green","bold":true}
+title @a title {"text":"GAME OVER!","color":"green","bold":true}
 execute as @a[team=red,limit=1] if entity @s[tag=winner] run title @a subtitle {"text":"Red has won!"}
 execute as @a[team=blue,limit=1] if entity @s[tag=winner] run title @a subtitle {"text":"Blue has won!"}
 execute as @a[team=green,limit=1] if entity @s[tag=winner] run title @a subtitle {"text":"Green has won!"}
