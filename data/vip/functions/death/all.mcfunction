@@ -1,7 +1,7 @@
 # VIP death tracking
 
 
-tellraw @s {"text":"You have died! Don't worry, in 25 seconds you will respawn.","color":"green"}
+tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"☠","color":"green"},{"text":"] ","color":"dark_gray"},{"text":"You died, but will respawn in 25 seconds.","color":"green"}]
 
 gamemode spectator @s
 

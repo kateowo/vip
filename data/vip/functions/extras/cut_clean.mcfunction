@@ -1,4 +1,4 @@
-# INFECTION CUT CLEAN
+# Cut Clean
 
 
 # 1.17+
