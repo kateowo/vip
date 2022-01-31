@@ -28,8 +28,8 @@ execute if score period internal matches 0..2 run function vip:time
 bossbar set vip:main players @a
 
 # extras
-function vip:extras/cut_clean
-function vip:extras/speed_uhc
+execute if score cut_clean global matches 1.. run function vip:extras/cut_clean
+execute if score speed_uhc global matches 1.. run function vip:extras/speed_uhc
 
 # VIP
 execute if score period internal matches 1 run effect give @a[tag=vip] glowing 1 255 true

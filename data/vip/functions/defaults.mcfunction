@@ -20,6 +20,10 @@ team modify blue friendlyFire false
 team modify green friendlyFire false
 team modify yellow friendlyFire false
 
+# extras
+scoreboard players set cut_clean global 1
+scoreboard players set speed_uhc global 1
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true
