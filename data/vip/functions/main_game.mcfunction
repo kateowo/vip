@@ -24,7 +24,7 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~
 gamerule fallDamage true
 
 effect give @a[tag=vip] health_boost 9999 4 true
-effect give @a[tag=vip] regeneration 1 255 true
+effect give @a regeneration 1 255 true
 
 
 scoreboard players set period internal 1

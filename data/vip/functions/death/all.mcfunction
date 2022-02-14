@@ -13,6 +13,7 @@ execute if entity @s[team=yellow] run tp @s @a[team=yellow,tag=vip,limit=1]
 
 execute if score respawn_loot global matches 1.. run give @s stone_axe{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}
 execute if score respawn_loot global matches 1.. run give @s stone_pickaxe{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}
+execute if score respawn_loot global matches 1.. run give @s leather_boots{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}
 
 scoreboard players set @s death_time 1
 scoreboard players reset @s death

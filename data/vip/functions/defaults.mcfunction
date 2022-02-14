@@ -24,6 +24,9 @@ team modify yellow friendlyFire false
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
 
+# death time
+scoreboard players set death_time global 25
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true

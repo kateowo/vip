@@ -4,7 +4,7 @@
 # once the user has been dead for 25s+
 
 # effect
-effect give @s resistance 2 255 true
+effect give @s resistance 3 255 true
 
 # based on team
 execute if entity @s[team=red] run tp @s @a[team=red,tag=vip,limit=1]
