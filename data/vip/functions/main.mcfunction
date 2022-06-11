@@ -21,7 +21,8 @@ execute if score period internal matches 1 if score team_count global matches 3 
 execute if score period internal matches 1 if score team_count global matches 4 run function vip:teams/4
 
 # kills
-execute as @a if score @s kill matches 1.. run function vip:kills
+execute as @a if score @s kill matches 1.. if score kill_health global matches 1.. run function vip:kills
+execute as @a if score @s kill matches 1.. run scoreboard players reset @s kill
 
 # timer
 execute if score period internal matches 0..2 run function vip:time
