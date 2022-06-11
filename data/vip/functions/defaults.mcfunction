@@ -27,6 +27,9 @@ scoreboard players set speed_uhc global 1
 # death time
 scoreboard players set death_time global 25
 
+# +health upon death
+scoreboard players set kill_health global 1
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true
