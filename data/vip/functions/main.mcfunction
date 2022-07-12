@@ -31,7 +31,7 @@ bossbar set vip:main players @a
 # extras
 execute if score cut_clean global matches 1.. run function vip:extras/cut_clean
 execute if score speed_uhc global matches 1.. run function vip:extras/speed_uhc
-execute if score speed_uhc global matches 1.. run function vip:extras/grindstone
+execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit global matches 1.. run function vip:extras/grindstone
 
 # VIP
 execute if score period internal matches 1 run effect give @a[tag=vip] glowing 1 255 true
