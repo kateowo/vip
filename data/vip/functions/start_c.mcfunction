@@ -1,4 +1,5 @@
-# VIP start (if confirmed)
+# VIP start
+## if eligible
 
 
 # title
@@ -9,12 +10,11 @@ title @a subtitle {"text":"You have 8 minutes to prepare with loot before your t
 execute as @a at @s run playsound entity.generic.explode player @s ~ ~ ~
 execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~
 
-# check which teams are being used
+# count players
 scoreboard players reset red internal
 scoreboard players reset blue internal
 scoreboard players reset green internal
 scoreboard players reset yellow internal
-
 execute as @a[team=red,limit=1] run scoreboard players set red internal 1
 execute as @a[team=blue,limit=1] run scoreboard players set blue internal 1
 execute as @a[team=green,limit=1] run scoreboard players set green internal 1
