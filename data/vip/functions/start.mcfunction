@@ -11,4 +11,4 @@ execute if score team_count global matches 4 if entity @a[team=red] if entity @a
 execute unless score start_confirmed internal matches 1.. run tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, check everyone is on a team (R+B for 2, R+B+G for 3, R+B+G+Y for 4).\n    If you are on an admin team, your gamemode will not be updated upon starting!","color":"green"}]
 
 # if confirmed
-execute if score start_confirmed internal matches 1.. run function vip:start_confirmed
+execute if score start_confirmed internal matches 1.. run function vip:start_c
