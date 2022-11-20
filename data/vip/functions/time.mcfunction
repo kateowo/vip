@@ -22,7 +22,7 @@ execute unless score finale internal matches 1.. run function vip:time_normal
 # bossbar
 execute if score period internal matches -1 run bossbar set vip:main name {"text":"The game will begin shortly!"}
 
-execute if score period internal matches 1 run bossbar set vip:main name ["",{"text":"VIP \u0020 \u0020","color":"green","bold":true},{"text":"Defend your VIP to keep your team alive and win!"}]
+execute if score period internal matches 1 run bossbar set vip:main name ["",{"text":"PROTECT THE VIP","color":"green","bold":true}]
 execute if score period internal matches 1 run bossbar set vip:main max 1
 
 execute if score period internal matches 1 run function vip:teams/bossbar
