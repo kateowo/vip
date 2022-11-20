@@ -8,10 +8,11 @@ scoreboard objectives add internal dummy
 scoreboard objectives add last_login dummy
 scoreboard objectives add kill playerKillCount
 
+# numbers
+scoreboard players set 900 internal 900
+
 # bossbar
 bossbar add vip:main ""
-bossbar set vip:main name {"text":"The game will begin shortly!"}
-bossbar set vip:main color green
 
 # death
 scoreboard objectives add death deathCount
@@ -41,7 +42,7 @@ team add red
 team add blue
 team add green
 team add yellow
-# admin bypass
+## admin bypass
 team add admin
 
 # display vip health
